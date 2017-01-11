@@ -11,35 +11,32 @@ public abstract class Animal
 
     public int getTrickVal()
     {
-
+	return trickVal;
     }
     public String getTrick()
     {
-
+	return trick;
     }
     public int getPrice()
     {
-
+	return price;
     }
     public int getAppealVal()
     {
-
+	return appealVal;
     }
     public int getLength()
     {
-
+	return length;
     }
     public int getWidth()
     {
-
+	return width;
     }
-    public int setTrickVal(int x)
-    {
-
+    public int setTrickVal(int x){
+	return 2;
+	//will update later if we have time
     }
-    public String toString()
-    {
-
-    }
+    public abstract String toString();
 
 }
