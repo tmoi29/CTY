@@ -1,0 +1,73 @@
+CTY
+Chester Huang
+Yedoh Kang
+Tiffany Moi
+pd 5
+---------------------
+Animal Circus!
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow we so BOSS bc...
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+blah blah pesky bug...
+maybe some of these will move into the Obs.Ovrcm section...
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow! oo!...
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+we changed ___ to ___ bc...
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tales of wisdom gained...
+||||||||||||||||||||||||||||||||||||||||||
+
+
+
+ ______   ______   __   __   __   	______   _______	 
+/_____/\ /_____/\ /_/\ /_/\ /_/\ 	/_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \	\:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \	\:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
+==============================================================
+
+
+2017-01-05
+--------------------------------------------------------------
+Chester :: Worked on the proposal + details (steps)
+Tiffany :: Worked on the proposal + details (steps)
+Yedoh :: Worked on the proposal + details (steps)
+
+
+2017-01-09
+--------------------------------------------------------------
+Chester :: Edited the proposal + worked on the UML Diagrams
+Tiffany :: Edited the proposal + worked on the UML Diagrams
+Yedoh :: Edited the proposal + worked on the UML Diagrams
+
+
+2017-01-10
+--------------------------------------------------------------
+Chester :: Worked on the flowchart + edited the todo list + completed implementing the UML Diagram
+Tiffany :: Worked on the todo list + edited the flowchart
+Yedoh :: Worked on the todo list + edited the flowchart
+
+
+2017-01-11
+--------------------------------------------------------------
+Chester :: Completed the .gitignore task
+Tiffany :: Worked on the Animal superclass + its subclasses
+Yedoh :: Worked on the devlog
+
+
+==============================================================
