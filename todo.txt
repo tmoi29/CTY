@@ -9,8 +9,9 @@ To Do List
 (DONE) 2. Finalize Woo class game logic (skeleton, from flow chart) 1/10
 (DONE) 3. Implement UML Diagram 1/10
 4. Follow flowchart, start from Preparation part of the game, then Circus
-	(PARTY DONE, NEED TO EDIT AFTER WE FINALIZE) 1. Animal superclass 1/11
+	(DONE) 1. Animal superclass 1/11
 		a. fill in extra code 
+		* come back to the setTrickVal method *
 	2. Animal subclasses 1/12
 		a. Decide on animal types, breed types
 		b. choose values for everything
