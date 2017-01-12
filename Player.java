@@ -6,6 +6,12 @@ public class Player
     private Animal[] ownedAnimals;
     private int price;
 
+    public Player()
+    {
+
+    }
+
+
     public void buyAnimal(Animal nameAnimal)
     {
 
