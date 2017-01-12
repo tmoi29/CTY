@@ -65,4 +65,9 @@ Tiffany :: Worked on the Animal superclass + its subclasses
 Yedoh :: Worked on the devlog, edited the todo list
 
 
+2017-01-12
+--------------------------------------------------------------
+Chester :: Added to Woo. Added some filler code to make it runnable.
+Tiffany, Yedoh :: Worked on Animal subclasses.
+
 ==============================================================
