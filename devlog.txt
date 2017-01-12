@@ -44,30 +44,25 @@ tales of wisdom gained...
 
 2017-01-05
 --------------------------------------------------------------
-Chester :: Worked on the proposal + details (steps)
-Tiffany :: Worked on the proposal + details (steps)
-Yedoh :: Worked on the proposal + details (steps)
+Chester, Tiffany, Yedoh :: Worked on the proposal + details (steps)
 
 
 2017-01-09
 --------------------------------------------------------------
-Chester :: Edited the proposal + worked on the UML Diagrams
-Tiffany :: Edited the proposal + worked on the UML Diagrams
-Yedoh :: Edited the proposal + worked on the UML Diagrams
+Chester, Tiffany, Yedoh :: Edited the proposal + worked on the UML Diagrams
 
 
 2017-01-10
 --------------------------------------------------------------
 Chester :: Worked on the flowchart + edited the todo list + completed implementing the UML Diagram
-Tiffany :: Worked on the todo list + edited the flowchart
-Yedoh :: Worked on the todo list + edited the flowchart
+Tiffany, Yedoh :: Worked on the todo list + edited the flowchart
 
 
 2017-01-11
 --------------------------------------------------------------
-Chester :: Completed the .gitignore task
+Chester :: Completed the .gitignore task, worked on class Woo
 Tiffany :: Worked on the Animal superclass + its subclasses
-Yedoh :: Worked on the devlog
+Yedoh :: Worked on the devlog, edited the todo list
 
 
 ==============================================================
