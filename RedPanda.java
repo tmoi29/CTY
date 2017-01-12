@@ -4,11 +4,21 @@ public class RedPanda extends Animal{
 	trick = "Swing and Slide";
 	price = 20;
 	appealVal = 30;
-	length = 2;
-	width = 1;
-	shape = {{1, 0, 0, 0}
-		 {1, 1, 1, 1}
-		 {0, 1, 0, 1}};
+	length = 3;
+	width = 4;
+	shape = new int[][] {{1, 0, 0, 0},
+			     {1, 1, 1, 1},
+			     {0, 1, 0, 1}};
 	isTrained = false;
+    }
+    public String toString(){
+	String retStr = "";
+	retStr += "Red Panda: \n";
+	retStr += "A smol furry creature that likes to swing on tree branches.\n";
+	retStr += "Trick: " + trick;
+	retStr += "\nTrick Value: " + trickVal;
+	retStr += "\nPrice: " + price;
+	retStr += "\nAppeal Value: " + appealVal;
+	return retStr;
     }
 }
