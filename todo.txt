@@ -12,7 +12,7 @@ To Do List
 	(DONE) 1. Animal superclass 1/11
 		a. fill in extra code 
 		* come back to the setTrickVal method *
-	2. Animal subclasses 1/12
+	(DONE) 2. Animal subclasses 1/12
 		a. Decide on animal types, breed types
 		b. choose values for everything
 		c. decide on the details
