@@ -58,7 +58,7 @@ public class Woo
             // preparation
             if (input == 1) {
                 System.out.println("\nWould you like to Buy or Train an animal?");
-                System.out.println("\t" + "1) Buy **CHOOSE BUY FOR NOW**" + "\n" + "\t" + "2) Train");
+                System.out.println("\t" + "1) Buy **for the first time**" + "\n" + "\t" + "2) Train");
                 int input2 = Keyboard.readInt();
                 // buy
                 if (input2 == 1) {
@@ -81,6 +81,7 @@ public class Woo
                     // int input = Keyboard.readInt();
                     // newPlayer.trainAnimal(newPlayer.ownedAnimals.get(input), )
                     // training the animal
+					newGame.countMoves -= 1;
                 }
                 else {
                     // catch errors (bad comment, but it's a comment)
