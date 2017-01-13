@@ -8,7 +8,7 @@ public abstract class Animal
     protected int width;
     protected int[][] shape;
     protected boolean isTrained;
-    public String name;
+    protected String name;
 
     public int getTrickVal()
     {

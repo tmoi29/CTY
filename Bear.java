@@ -11,6 +11,7 @@ public class Bear extends Animal{
 	    {1, 1, 1, 1},
 	    {0, 1, 0, 1}};
 	isTrained = false;
+        name = "Bear";
     }
     public String toString(){
 	String retStr = "";
