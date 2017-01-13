@@ -33,6 +33,10 @@ public abstract class Animal
     {
 	return width;
     }
+    public boolean train(){
+	isTrained = true;
+	return isTrained;
+    }
     public int setTrickVal(int x){
 	return 2;
 	//will update later if we have time
