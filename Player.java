@@ -6,6 +6,7 @@ public class Player
     private int currentFunds;
     private int amtFame;
     private ArrayList<Animal> ownedAnimals;
+    private ArrayList<Boolean> trained;
     private int price;
 
     public Player()
@@ -21,7 +22,7 @@ public class Player
         ownedAnimals.add(someAnimal);
 
     }
-
+    
     public void trainAnimal(Animal nameAnimal, int numTimes)
     {
 	nameAnimal.train();
@@ -30,6 +31,9 @@ public class Player
 
     public void setPrice(int val)
     {
+
+    }
+    public void listOwnedAnimals(){
 
     }
 
