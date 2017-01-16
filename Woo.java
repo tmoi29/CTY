@@ -11,15 +11,12 @@ public class Woo
     public static void printWelcome()
     {
         System.out.println("\nWelcome to the Animal Circus!\n");
-		System.out.println("Please enter your name!");
         // add more to the welcome message so user knows how to play
     }
 
     public static Player createNewPlayer()
     {
-		System.out.println("Name: ");
-		String nameInput = Keyboard.readString();
-        return new Player(nameInput); // filler
+        return new Player(); // filler
         // use Keyboard to get user inputs
         // use Player constructor
     }
@@ -49,7 +46,7 @@ public class Woo
         Player newPlayer = createNewPlayer();
         Circus newCircus = new Circus();
         //newPlayer.printStartInfo();
-        //newCircus.prntStartInfo();
+        newCircus.printStartInfo();
 
         while (newGame.countMoves > 0) { // for testing only
             newGame.printMoves();
@@ -79,19 +76,26 @@ public class Woo
                     }
                 }
                 else if (input2 == 2) {
+                    // add check if player owns nothing
                     newPlayer.listOwnedAnimals(); // need to write this method
-                    // System.out.println(0 is the first animal, 1 is the second, etc);
-                    // int input = Keyboard.readInt();
-                    // newPlayer.trainAnimal(newPlayer.ownedAnimals.get(input), )
-                    // training the animal
-					newGame.countMoves -= 1;
+                    int input4 = Keyboard.readInt();
+                    // implement input for how many times user wants to train
+                    newPlayer.trainAnimal(newPlayer.getOwnedAnimals().get(input - 1), 1);
+                    newGame.countMoves -= 1;
+                    System.out.println();
                 }
                 else {
-                    // catch errors (bad comment, but it's a comment)
+                    
                 }       
             }
             else if (input == 2) {
                 // circus
+                // check if any trained animals are owned
+                GameBoard newBoard = new GameBoard();
+                System.out.println("This is your Circus!");
+                System.out.println(newBoard.getBoard());
+                
+                
             
             }
             else {
