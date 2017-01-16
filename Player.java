@@ -6,25 +6,33 @@ public class Player
     private int currentFunds;
     private int amtFame;
     private ArrayList<Animal> ownedAnimals;
-    private int price;
+    //private int price;
 
-    public Player()
+    public Player(String n)
     {
         ownedAnimals = new ArrayList<Animal>();
+	currentFunds = 400;
+	amtFame = 0;
+	name = n;
     }
 
 
     public void buyAnimal(Animal someAnimal)
     {
-        // check if enough money
-        // do purchase confirmation
-        ownedAnimals.add(someAnimal);
-
+	if (currentFunds <= 0) {
+	    System.out.println("You do not have enough money to complete the transaction.");
+	}
+	else {
+	    ownedAnimals.add(someAnimal);
+	    currentFunds -= someAnimal.getPrice();
+	    System.out.println("You just bought a " + someAnimal.getName() + "!");
+	    System.out.println("You currently have $" + currentFunds + " left.");
+	}
     }
 
     public void listOwnedAnimals()
     {
-        System.out.println("Which animal would you like to train?");
+	System.out.println("Which animal would you like to train?");
         for (int x = 0; x < ownedAnimals.size(); x += 1)
             {
                 if (ownedAnimals.get(x).isTrained) {
@@ -35,22 +43,13 @@ public class Player
         
                 }
 
-            }
-        System.out.println("WORK IN PROGRESS\n");
-             
+            }             
     }
 
 
-    public void trainAnimal(Animal someAnimal, int numTimes)
+    public boolean trainAnimal(Animal someAnimal)
     {
-        //someAnimal.train();
-
+        return someAnimal.train();
     }
-
-    public void setPrice(int val)
-    {
-
-    }
-
 
 }
