@@ -55,6 +55,12 @@ public class Player
     {
         return someAnimal.train();
     }
+    public ArrayList<Integer> getTrickVal() {
+	return trickVal;
+    }
+    public ArrayList<Integer> getAppealVal() {
+	return appealVal;
+    }
 
     public ArrayList<Animal> getOwnedAnimals()
     {
