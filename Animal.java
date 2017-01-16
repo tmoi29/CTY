@@ -43,5 +43,8 @@ public abstract class Animal
 	//will update later if we have time
     }
     public abstract String toString();
+	public String getName() {
+		return name;
+	}
 
 }
