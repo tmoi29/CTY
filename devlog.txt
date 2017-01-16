@@ -74,7 +74,7 @@ Yedoh :: Worked on Animal subclasses. Added code to Woo (format + possible paths
 
 2017-01-15
 --------------------------------------------------------------
-Chester :: Stuff in Woo. Worked in GameBoard class. 
+Chester :: Added to Woo logic flow, buying/training animals mostly done. Worked in GameBoard class.
 Tiffany :: Worked on Player + Circus classes. Updated Animal class.
 Yedoh :: Worked on Player (methods) + Circus (methods) + Woo (name input) classes. Updated Animal class. Edited the todo list. 
 
