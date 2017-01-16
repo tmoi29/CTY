@@ -16,7 +16,7 @@ public class Woo
 
     public static Player createNewPlayer()
     {
-        return new Player(); // filler
+        return new Player("tempName"); // filler
         // use Keyboard to get user inputs
         // use Player constructor
     }
@@ -80,7 +80,7 @@ public class Woo
                     newPlayer.listOwnedAnimals(); // need to write this method
                     int input4 = Keyboard.readInt();
                     // implement input for how many times user wants to train
-                    newPlayer.trainAnimal(newPlayer.getOwnedAnimals().get(input - 1), 1);
+                    newPlayer.trainAnimal(newPlayer.getOwnedAnimals().get(input - 1));
                     newGame.countMoves -= 1;
                     System.out.println();
                 }

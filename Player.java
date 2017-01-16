@@ -56,4 +56,9 @@ public class Player
         return someAnimal.train();
     }
 
+    public ArrayList<Animal> getOwnedAnimals()
+    {
+        return ownedAnimals;
+    }
+
 }
