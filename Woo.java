@@ -11,12 +11,15 @@ public class Woo
     public static void printWelcome()
     {
         System.out.println("\nWelcome to the Animal Circus!\n");
+		System.out.println("Please enter your name!");
         // add more to the welcome message so user knows how to play
     }
 
     public static Player createNewPlayer()
     {
-        return new Player(); // filler
+		System.out.println("Name: ");
+		String nameInput = Keyboard.readString();
+        return new Player(nameInput); // filler
         // use Keyboard to get user inputs
         // use Player constructor
     }
