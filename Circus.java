@@ -3,34 +3,43 @@ public class Circus
     private int amtEarned;
     private int fameGained;
     private int numAudience;
+    private int price;
 
     public Circus()
     {
-        amtEarned = 0;
-        fameGained = 0;
-        numAudience = 100; // placeholder number  
+	amtEarned = 0;
+	fameGained = 0;
+	numAudience = 0;
+	price = 15;
     
     }
    
-    public int setNumAudience(int[] trickVals, int[] appealVal, int price)
+    public void setNumAudience(Player person)
     {
-	return 1; // filler
-    }
+	int sumAppeal = 0;
+	int sumTrick = 0;
+	for (Integer x : person.getAppealVal()){
+		sumAppeal += x;
+	} 
+	for (Integer x : person.getTrickVal()){
+		sumTrick += x;
+	} 
+numAudience = 	(sumAppeal + (sumTrick * 2)) / 2;
+    
+}
 
     public void setAmtEarned()
     {
-
+	amtEarned = numAudience * price;
     }
 
     public String toString()
     {
-	return ""; // filler
-    }
-    public void printStartInfo()
-    {
-        System.out.println("Total amount earned: " + amtEarned);
-        System.out.println("Total fame gained: " + fameGained);
+	String retStr = "";
+	retStr += "Total amount earned: " + amtEarned + "\n";
+       retStr += "Total fame gained: " + fameGained + "\n";
+	return retStr;
 
     }
-    
+
 }
