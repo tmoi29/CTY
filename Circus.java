@@ -6,7 +6,9 @@ public class Circus
 
     public Circus()
     {
-	
+        amtEarned = 0;
+        fameGained = 0;
+        numAudience = 100; // placeholder number  
     
     }
    
@@ -24,5 +26,11 @@ public class Circus
     {
 	return ""; // filler
     }
+    public void printStartInfo()
+    {
+        System.out.println("Total amount earned: " + amtEarned);
+        System.out.println("Total fame gained: " + fameGained);
 
+    }
+    
 }
