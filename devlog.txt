@@ -71,4 +71,11 @@ Chester :: Added to Woo. Added some filler code to make it runnable. Buying an a
 Tiffany :: Worked on Animal subclasses. Added code to Player to print out Animal train statuses. 
 Yedoh :: Worked on Animal subclasses. Added code to Woo (format + possible paths). Updated todo list. Updated UML Diagrams.
 
+
+2017-01-15
+--------------------------------------------------------------
+Chester :: Stuff in Woo. Worked in GameBoard class. 
+Tiffany :: Worked on Player + Circus classes. Updated Animal class.
+Yedoh :: Worked on Player (methods) + Circus (methods) + Woo (name input) classes. Updated Animal class. Edited the todo list. 
+
 ==============================================================
