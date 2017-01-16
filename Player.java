@@ -6,6 +6,8 @@ public class Player
     private int currentFunds;
     private int amtFame;
     private ArrayList<Animal> ownedAnimals;
+    private ArrayList<Integer> trickVal;
+    private ArrayList<Integer> appealVal;
     //private int price;
 
     public Player(String n)
@@ -37,6 +39,8 @@ public class Player
             {
                 if (ownedAnimals.get(x).isTrained) {
                     System.out.println(x + ") " + ownedAnimals.get(x).name + "\tALREADY TRAINED");
+					trickVal.add(ownedAnimals.get(x).getTrickVal());
+				    appealVal.add(ownedAnimals.get(x).getAppealVal());
                 }
                 else {
                     System.out.println(x + ") " + ownedAnimals.get(x).name);
