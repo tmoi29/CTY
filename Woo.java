@@ -3,9 +3,11 @@ import cs1.Keyboard;
 public class Woo
 {
     private int countMoves;
+    public static final String[] ANIMALS = {"Bear", "Elephant", "Giraffe", "Lion", "RedPanda"};
 
-    public Woo() {
-        countMoves = 3; // decide on what number here
+    public Woo()
+    {
+        countMoves = 5; // decide on what number here
     }
 
     public static void printWelcome()
@@ -14,97 +16,176 @@ public class Woo
         // add more to the welcome message so user knows how to play
     }
 
-    public static Player createNewPlayer()
-    {
-        return new Player("tempName"); // filler
-        // use Keyboard to get user inputs
-        // use Player constructor
-    }
-
     public void printMoves()
     {
         System.out.println("You have " + countMoves + " actions left.");
     }
 
-    public static void listAnimals()
+    public static String listAnimals()
     {
-        System.out.println("\nChoose one the following to purchase:");
-        System.out.println("1) Bear **CHOOSE BEAR FOR NOW**");
-        System.out.println("2) Elephant");
-        System.out.println("3) Giraffe");
-        System.out.println("4) Lion");
-        System.out.println("5) RedPanda");
+        String retStr = "";
+        for (int i = 0; i < ANIMALS.length; i += 1) 
+        {
+            retStr += "\t" + (i + 1) + ") " + ANIMALS[i] + "\n";
+        }
+        return retStr;
+    }
+
+    public static void attemptPurchase(Woo someGame, Player somePlayer, Animal someAnimal)
+    {         
+        System.out.println();
+        System.out.println(someAnimal);
+        
+        System.out.println();
+        System.out.println("Confirm purchase:");
+        System.out.println("\t" + "1) Yes.");
+        System.out.println("\t" + "2) No.");
+        
+        int confirmation = Keyboard.readInt();
+        
+        if (confirmation == 1)
+        {
+            somePlayer.buyAnimal(someAnimal);
+            someGame.countMoves -= 1;
+        }
+        else
+        {
+            System.out.println("No purchase made.");
+        }
     }
 
     public static void main(String[] args)
     {
-
-        System.out.println("\nOnly buying an animal is allowed for now!\nTraining the animals and performing the circus will be allowed soon!");
-
-        Woo newGame = new Woo();
         printWelcome();
-        Player newPlayer = createNewPlayer();
+        
+        Woo newGame = new Woo();
+        System.out.print("You are the owner of the Animal Circus. What is your name?" + "\n\t> ");
+        Player newPlayer = new Player(Keyboard.readString());
         Circus newCircus = new Circus();
-        //newPlayer.printStartInfo();
-        newCircus.printStartInfo();
+        GameBoard newBoard = new GameBoard();
 
-        while (newGame.countMoves > 0) { // for testing only
+        System.out.println();
+        System.out.println(newPlayer);
+
+        while (newGame.countMoves > 0)
+        {
+            System.out.println();
             newGame.printMoves();
-                        
-            System.out.println("\nWhat would you like to do?");
-            System.out.println("\t" + "1) Preparation **CHOOSE PREPARATION FOR NOW**" + "\n" + "\t" + "2) Circus");
-            int input = Keyboard.readInt();
-
-            // preparation
-            if (input == 1) {
-                System.out.println("\nWould you like to Buy or Train an animal?");
-                System.out.println("\t" + "1) Buy **for the first time**" + "\n" + "\t" + "2) Train");
-                int input2 = Keyboard.readInt();
-                // buy
-                if (input2 == 1) {
-                    listAnimals();
-                    int input3 = Keyboard.readInt();
-                    if (input3 == 1) {
-                        Bear newBear = new Bear();
-                        System.out.println("\n" + newBear);
-                        newPlayer.buyAnimal(newBear);
-                        newGame.countMoves -= 1;
-                        System.out.println();
-                    }
-                    else {
-                        // finish for rest of animals
-                    }
-                }
-                else if (input2 == 2) {
-                    // add check if player owns nothing
-                    newPlayer.listOwnedAnimals(); // need to write this method
-                    int input4 = Keyboard.readInt();
-                    // implement input for how many times user wants to train
-                    newPlayer.trainAnimal(newPlayer.getOwnedAnimals().get(input - 1));
-                    newGame.countMoves -= 1;
-                    System.out.println();
-                }
-                else {
-                    
-                }       
-            }
-            else if (input == 2) {
-                // circus
-                // check if any trained animals are owned
-                GameBoard newBoard = new GameBoard();
-                System.out.println("This is your Circus!");
-                System.out.println(newBoard.getBoard());
-                
-                
+            System.out.println("What would you like to do?");
+            System.out.println("\t" + "1) Buy and train animals.");
+            System.out.println("\t" + "2) Skip preparation and start the Animal Circus!");
             
+            int prepOrCircus = Keyboard.readInt();
+
+            if (prepOrCircus == 1)
+            {
+                System.out.println();
+                System.out.println("Would you like to buy or train an animal?");
+                System.out.println("\t" + "1) Buy!");
+                System.out.println("\t" + "2) Train!");
+               
+                int buyOrTrain = Keyboard.readInt();
+                
+                if (buyOrTrain == 1)
+                {
+                    System.out.println();
+                    System.out.println("Which animal would you like to buy?");
+                    System.out.println(listAnimals());
+
+                    int animalNum = Keyboard.readInt();
+
+                    if (animalNum == 1)
+                    {
+                        attemptPurchase(newGame, newPlayer, new Bear());
+
+                    }
+                    else if (animalNum == 2)
+                    {
+                        attemptPurchase(newGame, newPlayer, new Elephant());
+                    }
+                    else if (animalNum == 3)
+                    {
+                        attemptPurchase(newGame, newPlayer, new Giraffe());
+                    }
+                    else if (animalNum == 4)
+                    {
+                        attemptPurchase(newGame, newPlayer, new Lion());
+                    }
+                    else if (animalNum == 5)
+                    {
+                        attemptPurchase(newGame, newPlayer, new RedPanda());
+                    }                    
+                    else
+                    {
+                        System.out.println();
+                        System.out.println("Invalid input, please try again");
+                    }
+                }
+                else if (buyOrTrain == 2)
+                {
+                    if (newPlayer.getOwnedAnimals().size() > 0)
+                    {
+                        System.out.println();
+                        System.out.println("Which animal would you like to train?");
+                        System.out.println(newPlayer.listOwnedAnimals());
+                        
+                        int trainNum = Keyboard.readInt();
+
+                        if ((newPlayer.getOwnedAnimals().size() >= trainNum) && (trainNum > 0))
+                        {
+                            newGame.countMoves -= newPlayer.trainAnimal(newPlayer.getOwnedAnimals().get(trainNum - 1));
+                        }
+                        else
+                        {
+                            System.out.println();
+                            System.out.println("Invalid input, please try again");
+                        }
+                    }
+                    else
+                    {
+                        System.out.println();
+                        System.out.println("You do not own any animals!");
+                    }
+                }
+                else
+                {
+                    System.out.println();
+                    System.out.println("Invalid input, please try again");
+                }
+            }       
+            else if (prepOrCircus == 2)
+            {
+                if (newPlayer.getOwnedAnimals().size() > 0)
+                {
+                    break;
+                }
+                else
+                {
+                    System.out.println();
+                    System.out.println("Please buy an animal before starting the circus.");
+                }
             }
-            else {
-                // error handling
+            else
+            {
+                System.out.println();
+                System.out.println("Invalid input, please try again");
             }
 
         } // end while
-        System.out.println("You have 0 actions left.");
-        System.out.println("Thank you for playing Animal Circus!");
+        
+        if (newGame.countMoves == 0)
+        {
+            System.out.println();
+            System.out.println("You are out of actions.");
+            System.out.println("It's time to go to the Animal Circus!");
+        }
+       
+        System.out.println("\n\n\n\n");
+
+        System.out.println();
+        System.out.println("This is your Circus!");
+        System.out.println(newBoard.getBoard());  
+       
 
     } // end main
 } // end class

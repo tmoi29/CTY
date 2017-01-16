@@ -13,11 +13,21 @@ public class Player
     public Player(String n)
     {
         ownedAnimals = new ArrayList<Animal>();
+        trickVal = new ArrayList<Integer>();
+        appealVal = new ArrayList<Integer>();
 	currentFunds = 400;
 	amtFame = 0;
 	name = n;
     }
 
+    public String toString()
+    {
+        String retStr = "";
+        retStr += "Your current funds: $" + currentFunds + "\n";
+        retStr += "Your fame: " + amtFame;
+        return retStr;
+    }
+    
 
     public void buyAnimal(Animal someAnimal)
     {
@@ -29,31 +39,43 @@ public class Player
 	    currentFunds -= someAnimal.getPrice();
 	    System.out.println("You just bought a " + someAnimal.getName() + "!");
 	    System.out.println("You currently have $" + currentFunds + " left.");
+            trickVal.add(someAnimal.getTrickVal());
+            appealVal.add(someAnimal.getAppealVal());
 	}
     }
 
-    public void listOwnedAnimals()
+    public String listOwnedAnimals()
     {
-	System.out.println("Which animal would you like to train?");
+        String retStr = "";
+        
         for (int x = 0; x < ownedAnimals.size(); x += 1)
             {
                 if (ownedAnimals.get(x).isTrained) {
-                    System.out.println(x + ") " + ownedAnimals.get(x).name + "\tALREADY TRAINED");
-					trickVal.add(ownedAnimals.get(x).getTrickVal());
-				    appealVal.add(ownedAnimals.get(x).getAppealVal());
+                    retStr += "\t" + (x + 1) + ") " + ownedAnimals.get(x).name + "\t#ALREADY TRAINED#" + "\n";
+
                 }
                 else {
-                    System.out.println(x + ") " + ownedAnimals.get(x).name);
-        
+                    retStr += "\t" + (x + 1) + ") " + ownedAnimals.get(x).name + "\n";
+                   
                 }
 
-            }             
+            }
+        return retStr;
     }
 
 
-    public boolean trainAnimal(Animal someAnimal)
+    public int trainAnimal(Animal someAnimal)
     {
-        return someAnimal.train();
+        if (someAnimal.getIsTrained())
+        {
+            System.out.println("This animal is already trained.");
+            return 0;
+        }
+        else
+        {
+            someAnimal.train();
+            return 1;
+        }
     }
     public ArrayList<Integer> getTrickVal() {
 	return trickVal;

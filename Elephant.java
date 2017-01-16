@@ -14,6 +14,7 @@ public class Elephant extends Animal{
 			     {0, 0, 0, 1, 0, 1}};
 	isTrained = false;
 	isOnBoard = false;
+        name = "Elephant";
     }
     public String toString(){
 	String retStr = "";

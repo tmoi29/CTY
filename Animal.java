@@ -35,6 +35,10 @@ public abstract class Animal
     {
 	return width;
     }
+    public boolean getIsTrained()
+    {
+        return isTrained;
+    }
     public boolean train(){
 	isTrained = true;
 	return isTrained;
