@@ -13,6 +13,7 @@ public class Lion extends Animal{
 			     {1, 0, 1, 0},
 			     {1, 0, 1, 0}};
 	isTrained = false;
+	isOnBoard = false;
     }
     public String toString(){
 	String retStr = "";

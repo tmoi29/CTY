@@ -9,6 +9,7 @@ public abstract class Animal
     protected int[][] shape;
     protected boolean isTrained;
     protected String name;
+    protected boolean isOnBoard;
 
     public int getTrickVal()
     {
@@ -38,13 +39,20 @@ public abstract class Animal
 	isTrained = true;
 	return isTrained;
     }
-    public int setTrickVal(int x){
-	return 2;
-	//will update later if we have time
-    }
     public abstract String toString();
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+	return name;
+    }
+    public boolean putOnBoard(){
+	isOnBoard = true;
+	return isOnBoard;
+    }
+    public boolean removeOffBoard(){
+	isOnBoard = false;
+	return isOnBoard;
+    }
+    public boolean getIsOnBoard(){
+	return isOnBoard;
+    }
 
 }

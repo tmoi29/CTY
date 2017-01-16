@@ -12,6 +12,7 @@ public class Giraffe extends Animal{
 			     {0, 1, 1, 1},
 			     {0, 1, 0, 1}};
 	isTrained = false;
+	isOnBoard = false;
     }
     public String toString(){
 	String retStr = "";
