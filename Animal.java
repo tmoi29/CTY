@@ -35,6 +35,10 @@ public abstract class Animal
     {
 	return width;
     }
+    public int[][] getShape()
+    {
+	return shape;
+    }
     public boolean getIsTrained()
     {
         return isTrained;

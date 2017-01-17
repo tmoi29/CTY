@@ -1,19 +1,30 @@
 public class GameBoard
 {
     private int[][] board;
-    public Animal[] roster;
+    public ArrayList<int[][]> roster;
 
     public GameBoard()
     {
-	board = new int[][] {{0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0}};
+	board = new int[][] {{0, 0, 0, 0, 0, 0, 0, 0, 0},
+                             {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                             {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                             {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                             {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                             {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                             {0, 0, 0, 0, 0, 0, 0, 0, 0},
+			     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+			     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+			     {0, 0, 0, 0, 0, 0, 0, 0, 0}};
+	roster = new ArrayList<int[][]>();
+    }
 
-
+    public GameBoard(Player somePlayer)
+    {
+	GameBoard();
+	for (Animal someAnimal : somePlayer.getOwnedAnimals())
+	{
+	    roster.add(someAnimal.getShape());
+	}
     }
 
     public String getBoard()
