@@ -41,6 +41,11 @@ public class GameBoard
         return retStr;
                
     }
+
+    public ArrayList<int[][]> getRoster()
+    {
+	return roster;
+    }
     
     public void addAnimal(Animal nameAnimal, int x, int y)
     {
