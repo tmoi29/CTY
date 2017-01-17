@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class GameBoard
 {
     private int[][] board;
@@ -20,7 +22,7 @@ public class GameBoard
 
     public GameBoard(Player somePlayer)
     {
-	GameBoard();
+	this();
 	for (Animal someAnimal : somePlayer.getOwnedAnimals())
 	{
 	    roster.add(someAnimal.getShape());
