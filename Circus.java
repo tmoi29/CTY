@@ -13,6 +13,14 @@ public class Circus
 	price = 15;
     
     }
+    
+    public int getAmtEarned(){
+	return amtEarned;
+    }
+
+    public int getFameGained(){
+	return fameGained;
+    }
    
     public void results(Player person)
     {

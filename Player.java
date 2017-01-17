@@ -28,7 +28,13 @@ public class Player
         return retStr;
     }
     
-
+    public String newBalance(Circus c){
+	currentFunds += c.getAmtEarned();
+	amtFame += c.getFameGained();
+	String ret = "Updated Funds: " + currentFunds;
+	ret += "\nUpdated Fame: " + amtFame;
+	return ret;
+    }
     public void buyAnimal(Animal someAnimal)
     {
 	if (currentFunds <= 0) {

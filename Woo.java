@@ -154,18 +154,29 @@ public class Woo
                 }
             }       
             else if (prepOrCircus == 2)
-            {
-                if (newPlayer.getOwnedAnimals().size() > 0)
-                {
-                    break;
-                }
-                else
-                {
+		{
+		    if (newPlayer.getOwnedAnimals().size() > 0)
+			{
+                            System.out.println("\n\n\n\n");
+			    System.out.println();
+			    System.out.println("This is your Circus!");
+			    System.out.println(newBoard.getBoard()); 
+			    System.out.println(newBoard.getRoster());
+			    newCircus.results(newPlayer);
+			    newCircus.setAmtEarned();
+			    System.out.println(newCircus);
+			    System.out.println(newPlayer.newBalance(newCircus));
+			    
+       
+			}
+		    else
+			{
                     System.out.println();
                     System.out.println("Please buy an animal before starting the circus.");
                 }
             }
-            else
+      
+      else
             {
                 System.out.println();
                 System.out.println("Invalid input, please try again");
@@ -174,18 +185,21 @@ public class Woo
         } // end while
         
         if (newGame.countMoves == 0)
-        {
-            System.out.println();
-            System.out.println("You are out of actions.");
-            System.out.println("It's time to go to the Animal Circus!");
+	    {
+		System.out.println();
+		System.out.println("You are out of actions.");
+		System.out.println("It's time to go to the Animal Circus!");
+		System.out.println("\n\n\n\n");
+		System.out.println();
+		System.out.println("This is your Circus!");
+		System.out.println(newBoard.getBoard()); 
+		System.out.println(newBoard.getRoster());
+		newCircus.results(newPlayer);
+		newCircus.setAmtEarned();
+		System.out.println(newCircus);
+		System.out.println(newPlayer.newBalance(newCircus));
         }
-       
-        System.out.println("\n\n\n\n");
 
-        System.out.println();
-        System.out.println("This is your Circus!");
-        System.out.println(newBoard.getBoard());  
-       
 
     } // end main
 } // end class
