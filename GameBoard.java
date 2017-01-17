@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class GameBoard
 {
     private int[][] board;
-    public ArrayList<int[][]> roster;
+    public ArrayList<Animal> roster;
+    public ArrayList<int[][]> rosterShapes;
 
     public GameBoard()
     {
@@ -17,16 +18,8 @@ public class GameBoard
 			     {0, 0, 0, 0, 0, 0, 0, 0, 0},
 			     {0, 0, 0, 0, 0, 0, 0, 0, 0},
 			     {0, 0, 0, 0, 0, 0, 0, 0, 0}};
-	roster = new ArrayList<int[][]>();
-    }
-
-    public GameBoard(Player somePlayer)
-    {
-	this();
-	for (Animal someAnimal : somePlayer.getOwnedAnimals())
-	{
-	    roster.add(someAnimal.getShape());
-	}
+	roster = new ArrayList<Animal>();
+        rosterShapes = new ArrayList<int[][]>();
     }
 
     public String getBoard()
@@ -42,9 +35,17 @@ public class GameBoard
                
     }
 
-    public ArrayList<int[][]> getRoster()
+    public String getRoster(int i)
     {
-	return roster;
+        String retStr = "";
+        for (int x = 0; x < rosterShapes.get(i).length; x += 1) {
+            for (int y = 0; y < rosterShapes.get(i)[0].length; y += 1) {
+                retStr += rosterShapes.get(i)[x][y] + " ";
+            }
+            retStr += "\n";
+        }
+        retStr += "Next animal to place: A " + roster.get(i).getName();
+        return retStr;
     }
     
     public void addAnimal(Animal nameAnimal, int x, int y)
