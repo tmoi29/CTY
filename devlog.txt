@@ -78,4 +78,11 @@ Chester :: Added to Woo logic flow, buying/training animals mostly done. Worked 
 Tiffany :: Worked on Player + Circus classes. Updated Animal class.
 Yedoh :: Worked on Player (methods) + Circus (methods) + Woo (name input) classes. Updated Animal class. Edited the todo list. 
 
+
+2017-01-17
+--------------------------------------------------------------
+Chester :: Worked on Woo, Gameboard class.
+Tiffany :: Worked on Woo, Player, + Circus class.
+Yedoh :: Worked on Player (added getName method), Woo (user input error handling) classes. Updated/worked on README. 
+
 ==============================================================
