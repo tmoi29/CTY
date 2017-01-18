@@ -14,7 +14,7 @@ public class Woo
     {
         System.out.println("\nWelcome to the Animal Circus!\n");
         // add more to the welcome message so user knows how to play
-    }
+    }                                       
 
     public void printMoves()
     {
@@ -54,8 +54,8 @@ public class Woo
         {
             somePlayer.buyAnimal(someAnimal);
             someGame.countMoves -= 1;
-            someBoard.roster.add(someAnimal);
-            someBoard.rosterShapes.add(someAnimal.getShape());
+            someBoard.getRoster().add(someAnimal);
+            someBoard.getRosterShapes().add(someAnimal.getShape());
         }
         else
         {
@@ -210,15 +210,25 @@ public class Woo
         System.out.println("\n\n\n\n");
         System.out.println();
         System.out.println("This is your Circus!");
-        System.out.println(newBoard); 
-        System.out.println(newBoard.getRoster(0));
-     
-        System.out.println("input x, y coordinates");
-        int x = Keyboard.readInt();
-        int y = Keyboard.readInt();
-        newBoard.addAnimal(newBoard.roster.get(0), x, y);
         System.out.println(newBoard);
-        
+	int i = 0;
+	while (i < newBoard.getRoster().size()){
+
+	    System.out.println(newBoard.getRoster(i));
+     
+	    System.out.println("input x, y coordinates");
+	    System.out.print("X coordinate: ");
+	    int x = Keyboard.readInt();
+	    System.out.print("Y coordinate: ");
+	    int y = Keyboard.readInt();
+	    if (newBoard.addAnimal(newBoard.getRoster().get(i), x, y)){
+		System.out.println(newBoard);
+		i += 1;
+	    }
+	    else{
+		System.out.println("\n\nIt doesn't fit. Try again.\n\n");
+	    }
+	}
 
 
         System.out.println("\n\n to be continued, circus WIP");

@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class GameBoard
 {
     private int[][] board;
-    public ArrayList<Animal> roster;
-    public ArrayList<int[][]> rosterShapes;
+    private ArrayList<Animal> roster;
+    private ArrayList<int[][]> rosterShapes;
 
     public GameBoard()
     {
@@ -38,6 +38,10 @@ public class GameBoard
     {
         return board;
     }
+    
+    public ArrayList<Animal> getRoster(){
+	return roster;
+    }
 
     public String getRoster(int i)
     {
@@ -51,8 +55,12 @@ public class GameBoard
         retStr += "Next animal to place: " + roster.get(i).getName();
         return retStr;
     }
+
+    public ArrayList<int[][]> getRosterShapes(){
+	return rosterShapes;
+    }
     
-    public void addAnimal(Animal someAnimal, int x, int y)
+    public boolean addAnimal(Animal someAnimal, int x, int y)
     {
         int[][] animalShape = someAnimal.getShape();
 
@@ -65,13 +73,13 @@ public class GameBoard
                 {
                     if (animalShape[a][b] + board[x + a][y + b] > 1)
                     {
-                        return;
+                        return false;
                     }
                 }
                 catch (Exception e)
                 {
                     System.out.println("Sorry, the animal does not fit there");
-                    return;
+                    return false;
                 }
             }
         }
@@ -84,7 +92,7 @@ public class GameBoard
                 board[a + x][b + y] = animalShape[a][b];
             }
         }
-        
+        return true;
     }
 
     public void removeAnimal(Animal someAnimal, int x, int y)
