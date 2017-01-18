@@ -26,6 +26,7 @@ To Do List
 		a. work on the 2D array
 		b. work on methods to add and remove animals
 		c. test in Woo
+                d. make circus display prettier
 	(PARTLY DONE) 6. Woo driver 1/19
 		a. organize and write code based off flowchart
 		* still need to finish some methods/play moves *
