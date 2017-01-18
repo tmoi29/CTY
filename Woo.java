@@ -210,12 +210,18 @@ public class Woo
         System.out.println("\n\n\n\n");
         System.out.println();
         System.out.println("This is your Circus!");
-        System.out.println(newBoard.getBoard()); 
+        System.out.println(newBoard); 
         System.out.println(newBoard.getRoster(0));
-
-
-        System.out.println("CIRCUS WORK IN PROGRESS\n");
+     
+        System.out.println("input x, y coordinates");
+        int x = Keyboard.readInt();
+        int y = Keyboard.readInt();
+        newBoard.addAnimal(newBoard.roster.get(0), x, y);
+        System.out.println(newBoard);
         
+
+
+        System.out.println("\n\n to be continued, circus WIP");
         newCircus.results(newPlayer);
         newCircus.setAmtEarned();
         System.out.println(newCircus);

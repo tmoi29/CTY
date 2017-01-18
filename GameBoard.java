@@ -22,7 +22,7 @@ public class GameBoard
         rosterShapes = new ArrayList<int[][]>();
     }
 
-    public String getBoard()
+    public String toString()
     {
         String retStr = "";
         for (int x = 0; x < board.length; x += 1) {
@@ -32,7 +32,11 @@ public class GameBoard
             retStr += "\n";
         }
         return retStr;
-               
+    }
+    
+    public int[][] getBoard()
+    {
+        return board;
     }
 
     public String getRoster(int i)
@@ -44,23 +48,48 @@ public class GameBoard
             }
             retStr += "\n";
         }
-        retStr += "Next animal to place: A " + roster.get(i).getName();
+        retStr += "Next animal to place: " + roster.get(i).getName();
         return retStr;
     }
     
-    public void addAnimal(Animal nameAnimal, int x, int y)
+    public void addAnimal(Animal someAnimal, int x, int y)
     {
+        int[][] animalShape = someAnimal.getShape();
 
+        // returns void if animal does NOT fit
+        for (int a = 0; a < animalShape.length; a += 1)
+        {
+            for (int b = 0; b < animalShape[0].length; b += 1)
+            {
+                try
+                {
+                    if (animalShape[a][b] + board[x + a][y + b] > 1)
+                    {
+                        return;
+                    }
+                }
+                catch (Exception e)
+                {
+                    System.out.println("Sorry, the animal does not fit there");
+                    return;
+                }
+            }
+        }
+
+        // updates board if animal does fit
+        for (int a = 0; a < animalShape.length; a += 1)
+        {
+            for (int b = 0; b < animalShape[0].length; b += 1)
+            {
+                board[a + x][b + y] = animalShape[a][b];
+            }
+        }
+        
     }
 
-    public void removeAnimal(Animal nameAnimal, int x, int y)
+    public void removeAnimal(Animal someAnimal, int x, int y)
     {
 
-    }
-
-    public String toString()
-    {
-        return ""; //placeholder
     }
 
 }
