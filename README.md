@@ -6,17 +6,17 @@
 
 ### Launch Instructions:
 #### 1. Clone this repository! 
-```java
+```
 $ git clone https://github.com/tmoi29/CTY.git
 ```
 
 #### 2. Open the terminal and go to the directory in which you saved this repository.
 #### 3. Compile!
-```java
+```
 $ javac Woo.java
 ```
 #### 4. Run and have fun!
-```java
+```
 $ java Woo
 ```
 <br /> 
