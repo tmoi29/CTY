@@ -223,7 +223,7 @@ public class Woo
 			System.out.print("Y coordinate: ");
 			int y = Keyboard.readInt();
 			if (newBoard.addAnimal(newBoard.getRoster().get(i), x, y)){
-				System.out.println(newBoard);
+				System.out.println("\n" + newBoard);
 				i += 1;
 			}
 			else{
@@ -239,5 +239,5 @@ public class Woo
 		System.out.println(newCircus);
 		System.out.println(newPlayer.newBalance(newCircus));
 
-	} // end main
+ 	} // end main
 } // end class
