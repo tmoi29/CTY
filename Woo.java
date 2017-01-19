@@ -13,8 +13,7 @@ public class Woo
 	public static void printWelcome()
 	{
 		System.out.println("\nWelcome to the Animal Circus!\n");
-		System.out.println("You will start out with $400 to spend, and 0 fame points.\nBuy and train animals so that at the end of each circus, \nyou make money and gain fame points! \n\nHAVE FUN!!!!\n");
-		// add more to the welcome message so user knows how to play
+		System.out.println("You will start out with 8 moves, $400 to spend, and 0 fame points.\nBuy and train animals so that at the end of each circus, \nyou make money and gain fame points! \n\nHAVE FUN!!!!\n");
 	}                                       
 
 	public void printMoves()
@@ -193,13 +192,11 @@ public class Woo
 					System.out.println("Please buy an animal before starting the circus.");
 				}
 			}
-      
 			else
 			{
 				System.out.println();
 				System.out.println("Invalid input, please try again");
 			}
-
 		} // end while
         
 		if (newGame.countMoves == 0)
@@ -213,16 +210,17 @@ public class Woo
 		System.out.println();
 		System.out.println("This is your Circus!");
 		System.out.println(newBoard);
+		
 		int i = 0;
 		while (i < newBoard.getRoster().size()){
-
 			System.out.println(newBoard.getRoster(i));
-     
-			System.out.println("\ninput x, y coordinates");
+			
+			System.out.println("\nInput X, Y coordinates");
 			System.out.print("X coordinate: ");
 			int x = Keyboard.readInt();
 			System.out.print("Y coordinate: ");
 			int y = Keyboard.readInt();
+			
 			if (newBoard.addAnimal(newBoard.getRoster().get(i), x, y)){
 				System.out.println("\n" + newBoard);
 				i += 1;
@@ -233,8 +231,7 @@ public class Woo
 			}
 		}
 
-
-		System.out.println("\n\n to be continued, circus WIP");
+		System.out.println("\n\nTo be continued, circus WIP");
 		newCircus.results(newPlayer);
 		newCircus.setAmtEarned();
 		System.out.println(newCircus);
