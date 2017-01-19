@@ -44,7 +44,7 @@ public class Player
 		else {
 			ownedAnimals.add(someAnimal);
 			currentFunds -= someAnimal.getPrice();
-			System.out.println("You just bought a " + someAnimal.getName() + "!");
+			System.out.println("\nYou just bought a " + someAnimal.getName() + "!");
 			System.out.println("You currently have $" + currentFunds + " left.");
 			trickVal.add(someAnimal.getTrickVal());
 			appealVal.add(someAnimal.getAppealVal());

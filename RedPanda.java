@@ -16,11 +16,11 @@ public class RedPanda extends Animal{
     public String toString(){
 	String retStr = "";
 	retStr += "Red Panda: \n";
-	retStr += "A smol furry creature that likes to swing on tree branches.\n";
-	retStr += "Trick: " + trick;
-	retStr += "\nTrick Value: " + trickVal;
-	retStr += "\nPrice: " + price;
-	retStr += "\nAppeal Value: " + appealVal;
+	retStr += "\tA smol furry creature that likes to swing on tree branches.\n";
+	retStr += "\tTrick: " + trick;
+	retStr += "\n\tTrick Value: " + trickVal;
+	retStr += "\n\tPrice: " + price;
+	retStr += "\n\tAppeal Value: " + appealVal;
 	return retStr;
     }
 }

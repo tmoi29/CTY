@@ -18,11 +18,11 @@ public class Giraffe extends Animal{
     public String toString(){
 	String retStr = "";
 	retStr += "Giraffe: \n";
-	retStr += "A tol friendly creature that has a purple sticky tongue.\n";
-	retStr += "Trick: " + trick;
-	retStr += "\nTrick Value: " + trickVal;
-	retStr += "\nPrice: " + price;
-	retStr += "\nAppeal Value: " + appealVal;
+	retStr += "\tA tol friendly creature that has a purple sticky tongue.\n";
+	retStr += "\tTrick: " + trick;
+	retStr += "\n\tTrick Value: " + trickVal;
+	retStr += "\n\tPrice: " + price;
+	retStr += "\n\tAppeal Value: " + appealVal;
 	return retStr;
     }
 }

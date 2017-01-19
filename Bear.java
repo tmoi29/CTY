@@ -17,11 +17,11 @@ public class Bear extends Animal{
     public String toString(){
 	String retStr = "";
 	retStr += "Bear: \n";
-	retStr += "A hooge furry creature that likes to give hugs.\n";
-	retStr += "Trick: " + trick;
-	retStr += "\nTrick Value: " + trickVal;
-	retStr += "\nPrice: " + price;
-	retStr += "\nAppeal Value: " + appealVal;
+	retStr += "\tA hooge furry creature that likes to give hugs.\n";
+	retStr += "\tTrick: " + trick;
+	retStr += "\n\tTrick Value: " + trickVal;
+	retStr += "\n\tPrice: " + price;
+	retStr += "\n\tAppeal Value: " + appealVal;
 	return retStr;
     }
 }

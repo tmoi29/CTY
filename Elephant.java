@@ -19,11 +19,11 @@ public class Elephant extends Animal{
     public String toString(){
 	String retStr = "";
 	retStr += "Elephant: \n";
-	retStr += "A hooge friendly creature that likes to play with water.\n";
-	retStr += "Trick: " + trick;
-	retStr += "\nTrick Value: " + trickVal;
-	retStr += "\nPrice: " + price;
-	retStr += "\nAppeal Value: " + appealVal;
+	retStr += "\tA hooge friendly creature that likes to play with water.\n";
+	retStr += "\tTrick: " + trick;
+	retStr += "\n\tTrick Value: " + trickVal;
+	retStr += "\n\tPrice: " + price;
+	retStr += "\n\tAppeal Value: " + appealVal;
 	return retStr;
     }
 }
