@@ -89,7 +89,7 @@ Yedoh :: Worked on Player (added getName method), Woo (user input error handling
 2017-01-18
 --------------------------------------------------------------
 Chester :: Worked on Woo, Gameboard class, README
-Tiffany :: Worked on Woo, Gameboard
+Tiffany :: Worked on Woo (clarified coordinate input and fixed Gameboard methods), Gameboard (corrected and added accessor methods)
 Yedoh :: Worked on Woo (fixed format + allowed user to view the current gameboard after input), updated README 
 
 ==============================================================
