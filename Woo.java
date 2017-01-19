@@ -7,12 +7,13 @@ public class Woo
 
 	public Woo()
 	{
-		countMoves = 5; // decide on what number here
+		countMoves = 8; // decide on what number here
 	}
 
 	public static void printWelcome()
 	{
 		System.out.println("\nWelcome to the Animal Circus!\n");
+		System.out.println("You will start out with $400 to spend, and 0 fame points.\nBuy and train animals so that at the end of each circus, \nyou make money and gain fame points! \n\nHAVE FUN!!!!\n");
 		// add more to the welcome message so user knows how to play
 	}                                       
 
