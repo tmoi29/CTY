@@ -85,4 +85,11 @@ Chester :: Worked on Woo, Gameboard class, can now add animals to game board
 Tiffany :: Worked on Woo (implemented the new Circus and Player methods), Player, + Circus class.
 Yedoh :: Worked on Player (added getName method), Woo (user input error handling) classes. Updated/worked on README. 
 
+
+2017-01-18
+--------------------------------------------------------------
+Chester :: Worked on Woo, Gameboard class, README
+Tiffany :: Worked on Woo, Gameboard
+Yedoh :: Worked on Woo (fixed format + allowed user to view the current gameboard after input), updated README 
+
 ==============================================================
