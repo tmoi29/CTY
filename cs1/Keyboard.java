@@ -14,7 +14,7 @@ public class Keyboard
 {
    //*************  Error Handling Section  **************************
 
-   private static boolean printErrors = true;
+   private static boolean printErrors = false;;
    private static int errorCount = 0;
 
    //-----------------------------------------------------------------
