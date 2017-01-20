@@ -9,14 +9,15 @@ public class Woo
 
 	public Woo()
 	{
-		countMoves = 8; // decide on what number here
+		countMoves = 3; // decide on what number here
                 gameRunning = true;
 	}
 
 	public static void printWelcome()
 	{
 		System.out.println("\nWelcome to the Animal Circus!\n");
-		System.out.println("You will start out with 8 moves, $400 to spend, and 0 fame points.\nBuy and train animals so that at the end of each circus, \nyou make money and gain fame points! \n\nHAVE FUN!!!!\n");
+		System.out.println("You are the owner of the circus.\nUse your time and money wisely to buy and train animals.\n" +
+                                   "Position your animals in the circus so that you can earn money and fame.\n\nHAVE FUN!!!\n");
 	}                                       
 
 	public void printMoves()
@@ -55,6 +56,7 @@ public class Woo
         
 		if (confirmation == 1)
 		{
+                        System.out.println(prettySpacing(100));
 			somePlayer.buyAnimal(someAnimal);
 			someGame.countMoves -= 1;
 			someBoard.getRoster().add(someAnimal);
@@ -62,21 +64,36 @@ public class Woo
 		}
 		else
 		{
-			System.out.println("No purchase made.");
+                        System.out.println(prettySpacing(100));
+		 	System.out.println("No purchase made.");
 		}
 	}
 
+        public static String prettySpacing(int x)
+        { 
+            String retStr = "";
+            for (int i = 0; i < x; i += 1)
+            {
+                retStr += "\n";
+            }                
+            return retStr;
+        }
+    
+    
 	public static void main(String[] args)
 	{
+                String spacing = prettySpacing(100);
+                System.out.println(spacing);
 		printWelcome();
         
 		Woo newGame = new Woo();
-		System.out.print("You are the owner of the Animal Circus. What is your name?" + "\n\t> ");
+		System.out.print("What is your name?" + "\n\t> ");
 		Player newPlayer = new Player(Keyboard.readString());
 		Circus newCircus = new Circus();
 		GameBoard newBoard = new GameBoard();
 
-		System.out.println();
+		System.out.println(spacing);
+                System.out.println("Hello " + newPlayer.getName() + "!\n");
 		System.out.println(newPlayer);
 
                 while (newGame.gameRunning)
@@ -86,6 +103,7 @@ public class Woo
 		{
 			System.out.println();
 			newGame.printMoves();
+                        System.out.println();
 			System.out.println("What would you like to do?");
 			System.out.println("\t" + "1) Buy and train animals.");
 			System.out.println("\t" + "2) Skip preparation and start the Animal Circus!");
@@ -94,14 +112,14 @@ public class Woo
 			int prepOrCircus = Keyboard.readInt();
                         
 			while (prepOrCircus != 1 && prepOrCircus != 2) {
-				System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+				System.out.println ("Invalid input. Please enter a valid number for selection.");
 				System.out.print("Selection: ");
 				prepOrCircus = Keyboard.readInt();
 			}
 
 			if (prepOrCircus == 1)
 			{
-				System.out.println();
+				System.out.println(spacing);
 				System.out.println("Would you like to buy or train an animal?");
 				System.out.println("\t" + "1) Buy!");
 				System.out.println("\t" + "2) Train!");
@@ -110,26 +128,26 @@ public class Woo
 				int buyOrTrain = Keyboard.readInt();
                                 
 				while (buyOrTrain != 1 && buyOrTrain != 2) {
-					System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+					System.out.println ("Invalid input. Please enter a valid number for selection.");
 					System.out.print("Selection: ");
 					buyOrTrain = Keyboard.readInt();
 				}
                 
 				if (buyOrTrain == 1)
 				{
-					System.out.println();
+					System.out.println(spacing);
 					System.out.println("Which animal would you like to buy?");
-					System.out.print(listAnimals());
+                                        System.out.print(listAnimals());
 
 					System.out.print("Selection: ");
 					int animalNum = Keyboard.readInt();
                                         
 					while (animalNum != 1 && animalNum != 2 && animalNum != 3 && animalNum != 4 && animalNum != 5) {
-						System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+						System.out.println ("Invalid input. Please enter a valid number for selection.");
 						System.out.print("Selection: ");
 						animalNum = Keyboard.readInt();
 					}
-
+                                        System.out.println(spacing);
 					if (animalNum == 1)
 					{
 						attemptPurchase(newGame, newPlayer, new Bear(), newBoard);
@@ -155,33 +173,45 @@ public class Woo
 				{
 					if (newPlayer.getOwnedAnimals().size() > 0)
 					{
-						System.out.println();
+						System.out.println(spacing);
 						System.out.println("Which animal would you like to train?");
 						System.out.println(newPlayer.listOwnedAnimals());
                         
 						System.out.print("Selection: ");
 						int trainNum = Keyboard.readInt();
                                                 
-						while (trainNum > newPlayer.getOwnedAnimals().size()) {
-							System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+						while (trainNum > newPlayer.getOwnedAnimals().size() || trainNum < 1) {
+                                                        System.out.println ("Invalid input. Please enter a valid number for selection.");
 							System.out.print("Selection: ");
 							trainNum = Keyboard.readInt();
 						}
 
-						if ((newPlayer.getOwnedAnimals().size() >= trainNum) && (trainNum > 0))
+						if (newPlayer.getOwnedAnimals().size() >= trainNum)
 						{
-							newGame.countMoves -= newPlayer.trainAnimal(newPlayer.getOwnedAnimals().get(trainNum - 1));
+                                                    int isTrained =  newPlayer.trainAnimal(newPlayer.getOwnedAnimals().get(trainNum - 1));
+                                                    if (isTrained == 1)
+                                                    {
+                                                        newGame.countMoves -= 1;
+                                                        System.out.println(spacing);
 							System.out.println("\nSuccessfully trained!");
+                                                    }
+                                                    else
+                                                    {
+                                                        System.out.println(spacing);
+                                                        System.out.println("\nThis animal was already trained!");
+                                                        System.out.println("\nNo actions deducted.");
+                                                    }
+                                                       
 						}
 						else
 						{
 							System.out.println();
-							System.out.println("Invalid input, please try again");
+							System.out.println("Invalid input. Please enter a valid number for selection.");
 						}
 					}
 					else
 					{
-						System.out.println();
+						System.out.println(spacing);
 						System.out.println("You do not own any animals!");
 					}
 				}
@@ -194,32 +224,30 @@ public class Woo
 				}
 				else
 				{
-					System.out.println();
+					System.out.println(spacing);
 					System.out.println("Please buy an animal before starting the circus.");
 				}
 			}
 			else
 			{
 				System.out.println();
-				System.out.println("Invalid input, please try again");
+				System.out.println("Invalid input. Please enter a valid number for selection.");
 			}
 		} // end while
-        
+
+                System.out.println(spacing);
+                
 		if (newGame.countMoves == 0)
 		{
-			System.out.println();
-			System.out.println("You are out of actions.");
-			System.out.println("It's time to go to the Animal Circus!");
+			System.out.println("You are out of actions.\nIt's time to go to the circus!");
 		}
-
-		System.out.println("\n\n\n");
+                
 		System.out.println();
-		System.out.println("This is your Circus!");
-		System.out.println(newBoard);
-		
-		int i = 0;
+		System.out.println("This is your Circus:\n");
+		System.out.println(newBoard + "//WORK ON DISPLAY");
+
+                int i = 0;
 		while (i < newBoard.getRoster().size()){
-			System.out.println(newBoard.getRoster(i));
 
                         System.out.println("\nWhat would you like to do?");
                         System.out.println("\t1) Place this animal");
@@ -229,7 +257,7 @@ public class Woo
 
                         while (placeAnimal != 1 && placeAnimal != 2 && placeAnimal != 3)
                         {
-                            System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+                            System.out.println ("Invalid input. Please enter a valid number for selection.");
                             System.out.print("Selection: ");
                             placeAnimal = Keyboard.readInt();
                         }
@@ -267,23 +295,24 @@ public class Woo
 		System.out.println(newCircus);
 		System.out.println(newPlayer.newBalance(newCircus));
 
-                System.out.println("Would you like to continue playing?");
+                System.out.println(spacing);
+                System.out.println("Would you like to prepare for the next circus?");
                 System.out.println("\t1) Yes");
                 System.out.println("\t2) No, show me the final results");
                 int keepPlaying = Keyboard.readInt();
 
                 while (keepPlaying != 1 && keepPlaying != 2)
                 {
-                    
-                    System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+                    System.out.println ("Invalid input. Please enter a valid number for selection.");
                     System.out.print("Selection: ");
                     keepPlaying = Keyboard.readInt();
                 }
                 if (keepPlaying == 1)
                 {
-                    newGame.countMoves = 8;
-                    newBoard.expandBoard(1);
+                    newGame.countMoves = 3;
+                    // newBoard.expandBoard(1);
                     newBoard.reset();
+                    System.out.println(spacing);
                 }
                 
                 if (keepPlaying == 2)

@@ -67,7 +67,7 @@ public class Player
 			}
 
 		}
-		return retStr;
+		return retStr.substring(0, retStr.length() - 1);
 	}
 
 
