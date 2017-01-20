@@ -3,11 +3,14 @@ import cs1.Keyboard;
 public class Woo
 {
 	private int countMoves;
+        private boolean gameRunning;
+    
 	public static final String[] ANIMALS = {"Bear", "Elephant", "Giraffe", "Lion", "RedPanda"};
 
 	public Woo()
 	{
 		countMoves = 8; // decide on what number here
+                gameRunning = true;
 	}
 
 	public static void printWelcome()
@@ -76,6 +79,9 @@ public class Woo
 		System.out.println();
 		System.out.println(newPlayer);
 
+                while (newGame.gameRunning)
+                {
+                
 		while (newGame.countMoves > 0)
 		{
 			System.out.println();
@@ -261,5 +267,41 @@ public class Woo
 		System.out.println(newCircus);
 		System.out.println(newPlayer.newBalance(newCircus));
 
+                System.out.println("Would you like to continue playing?");
+                System.out.println("\t1) Yes");
+                System.out.println("\t2) No, show me the final results");
+                int keepPlaying = Keyboard.readInt();
+
+                while (keepPlaying != 1 && keepPlaying != 2)
+                {
+                    
+                    System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+                    System.out.print("Selection: ");
+                    keepPlaying = Keyboard.readInt();
+                }
+                if (keepPlaying == 1)
+                {
+                    newGame.countMoves = 8;
+                    newBoard.expandBoard(1);
+                    newBoard.reset();
+                }
+                
+                if (keepPlaying == 2)
+                {
+                    newGame.gameRunning = false;
+                }
+                } // end while
+
+
+                System.out.println("Thanks for playing!");
+                String owned = "|";
+                for (Animal someAnimal : newPlayer.getOwnedAnimals())
+                {
+                    owned += someAnimal.getName() + "|";
+                }
+                System.out.println("Animals you owned: " + owned);
+                System.out.println(newPlayer);
+                
+                
  	} // end main
 } // end class

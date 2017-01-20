@@ -3,21 +3,14 @@ import java.util.ArrayList;
 public class GameBoard
 {
     private int[][] board;
+    private int boardSize;
     private ArrayList<Animal> roster;
     private ArrayList<int[][]> rosterShapes;
 
     public GameBoard()
     {
-	board = new int[][] {{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-			     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-			     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-			     {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
+        boardSize = 10;
+	board = new int[boardSize][boardSize];
 	roster = new ArrayList<Animal>();
         rosterShapes = new ArrayList<int[][]>();
     }
@@ -97,9 +90,15 @@ public class GameBoard
         return true;
     }
 
-    public void removeAnimal(Animal someAnimal, int x, int y)
+    public void reset()
     {
+        board = new int[boardSize][boardSize];
 
+    }
+
+    public void expandBoard(int x)
+    {
+        boardSize += x;
     }
 
 }
