@@ -214,24 +214,48 @@ public class Woo
 		int i = 0;
 		while (i < newBoard.getRoster().size()){
 			System.out.println(newBoard.getRoster(i));
+
+                        System.out.println("\nWhat would you like to do?");
+                        System.out.println("\t1) Place this animal");
+                        System.out.println("\t2) Skip to next animal");
+                        System.out.println("\t3) End the circus right now");
+                        int placeAnimal = Keyboard.readInt();
+
+                        while (placeAnimal != 1 && placeAnimal != 2 && placeAnimal != 3)
+                        {
+                            System.out.println ("Invalid number selected. Please enter a valid number for selection.");
+                            System.out.print("Selection: ");
+                            placeAnimal = Keyboard.readInt();
+                        }
+                        
+                        if (placeAnimal == 1)
+                        {
+                            System.out.println("\nInput X, Y coordinates");
+                            System.out.print("X coordinate: ");
+                            int x = Keyboard.readInt();
+                            System.out.print("Y coordinate: ");
+                            int y = Keyboard.readInt();
 			
-			System.out.println("\nInput X, Y coordinates");
-			System.out.print("X coordinate: ");
-			int x = Keyboard.readInt();
-			System.out.print("Y coordinate: ");
-			int y = Keyboard.readInt();
-			
-			if (newBoard.addAnimal(newBoard.getRoster().get(i), x, y)){
+                            if (newBoard.addAnimal(newBoard.getRoster().get(i), x, y)){
 				System.out.println("\n" + newBoard);
 				i += 1;
-			}
-			else{
+                            }
+                            else{
 				System.out.println("\n\nIt doesn't fit. Try again.\n\n");
 				System.out.println(newBoard);
-			}
-		}
+                            }
+                            
+                        }
+                        else if (placeAnimal == 2)
+                        {
+                            i += 1;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                }
 
-		System.out.println("\n\nTo be continued, circus WIP");
 		newCircus.results(newPlayer);
 		newCircus.setAmtEarned();
 		System.out.println(newCircus);
