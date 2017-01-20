@@ -23,8 +23,8 @@ public class Player
 	public String toString()
 	{
 		String retStr = "";
-		retStr += "Your current funds: $" + currentFunds + "\n";
-		retStr += "Your fame: " + amtFame;
+		retStr += "Your current funds: $ " + currentFunds + "\n";
+		retStr += "Your fame: " + amtFame + " points";
 		return retStr;
 	}
     

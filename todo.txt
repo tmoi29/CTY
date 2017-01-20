@@ -22,17 +22,17 @@ To Do List
 	(DONE) 4. Circus class 1/14 - 15
 		a. write all methods, test in Woo 
 		b. (Implement an algorithm to calculate number of attendees based on price of tickets, number of animals, and their appeal values)
-	(PARTLY DONE) 5. GameBoard class 1/16 - 18
+	(DONE) 5. GameBoard class 1/16 - 18
 		a. work on the 2D array
 		b. work on methods to add and remove animals
 		c. test in Woo
                 d. make circus display prettier
 	(PARTLY DONE) 6. Woo driver 1/19
 		a. organize and write code based off flowchart
-		* still need to finish some methods/play moves *
-        7. Adjust numbers
+		* still need to finalize *
+        7. Adjust numbers 1/20
                 a. decide on permanent values: countMoves, price, algorithm for results
-        8. MAKE IT LOOK NICE
+        8. MAKE IT LOOK NICE 1/20
                 a. less text on screen at once as to not overwhelm user
                 b. GameBoard and Animals-- figure out a better way to display
 	9. check 1/20 - end (1/22) 

@@ -96,6 +96,6 @@ Yedoh :: Worked on Woo (fixed format + allowed user to view the current gameboar
 --------------------------------------------------------------
 Chester :: Woo circus, skip animals, ending the game
 Tiffany ::
-Yedoh ::
+Yedoh :: Fixed format (nicer to look at from the terminal), and fixed a few more things in Woo.
 
 ==============================================================
