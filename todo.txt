@@ -30,7 +30,12 @@ To Do List
 	(PARTLY DONE) 6. Woo driver 1/19
 		a. organize and write code based off flowchart
 		* still need to finish some methods/play moves *
-	7. check 1/20 - end (1/22) 
+        7. Adjust numbers
+                a. decide on permanent values: countMoves, price, algorithm for results
+        8. MAKE IT LOOK NICE
+                a. less text on screen at once as to not overwhelm user
+                b. GameBoard and Animals-- figure out a better way to display
+	9. check 1/20 - end (1/22) 
 		a. review code and run tests
 		b. debugging
 
