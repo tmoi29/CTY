@@ -28,6 +28,33 @@ public class GameBoard
 		}
 		return retStr;
 	}
+
+        public String boardState(int x)
+        {
+	    String retStr = "";
+	    for (int a = 0; a < board.length - roster.get(x).getLength(); a += 1)
+	    {
+		for (int b = 0; b < board[0].length; b += 1)
+		{
+		    retStr += board[a][b] + " ";
+		}
+		retStr += "\n";
+	    }
+	    for (int a = board.length - roster.get(x).getLength(); a += 1)
+	    {
+		for (int b = 0; b < board[0].length; b += 1)
+		{
+		    retStr += board[a][b] + " ";
+		}
+		for (int c = 0; c < roster.get(x).getWidth(); c += 1)
+		{
+		    retStr += roster.get(x).getShape()[a][c] + " ";
+		}
+		retStr += "\n";
+	    }
+	    return retStr;
+	}
+    
     
 	public int[][] getBoard()
 	{
