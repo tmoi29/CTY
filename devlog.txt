@@ -95,7 +95,7 @@ Yedoh :: Worked on Woo (fixed format + allowed user to view the current gameboar
 2017-01-19
 --------------------------------------------------------------
 Chester :: Woo circus, skip animals, ending the game
-Tiffany ::
+Tiffany :: Fixed Gameboard format to make the coordinate system easier to use.
 Yedoh :: Fixed format (nicer to look at from the terminal), and fixed a few more things in Woo. Fixed fame points update problem.
 
 ==============================================================
