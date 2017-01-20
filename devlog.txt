@@ -10,7 +10,8 @@ Animal Circus!
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+GameBoard:
+
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -19,23 +20,27 @@ maybe some of these will move into the Obs.Ovrcm section...
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+Learned how to print pretty symbols.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+We added a game board to enhance the gaming experience. 
+We removed the distinction between adults and children during the circus.
+We removed the user ability to change the price in order to streamline the game.
+We removed the special moves of animals.
+We changed the game from being time sensitive to move sensitive. 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
+ALWAYS PULL BEFORE COMMITTING
 ||||||||||||||||||||||||||||||||||||||||||
 
 
 
- ______   ______   __   __   __   	______   _______	 
-/_____/\ /_____/\ /_/\ /_/\ /_/\ 	/_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \	\:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \	\:\ \ \ \\:\ /____/\
+ ______   ______   __   __   __       ______   _______	 
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
   \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
    \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/

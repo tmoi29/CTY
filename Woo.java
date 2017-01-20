@@ -295,11 +295,11 @@ public class Woo
 		System.out.println(newCircus);
 		System.out.println(newPlayer.newBalance(newCircus));
 
-                System.out.println(spacing);
                 System.out.println("Would you like to prepare for the next circus?");
                 System.out.println("\t1) Yes");
                 System.out.println("\t2) No, show me the final results");
                 int keepPlaying = Keyboard.readInt();
+		System.out.println(spacing);
 
                 while (keepPlaying != 1 && keepPlaying != 2)
                 {
