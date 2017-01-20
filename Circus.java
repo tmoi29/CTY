@@ -33,7 +33,12 @@ public class Circus
 			sumTrick += x;
 		} 
 		numAudience = 	(sumAppeal + (sumTrick * 2)) / 2;
-		fameGained = sumAppeal * 4;
+		
+		for (int i = 0; i < person.getOwnedAnimals().size(); i++) {
+			if (person.getOwnedAnimals().get(i).getIsTrained() && person.getOwnedAnimals().get(i).getIsOnBoard()){
+				fameGained += person.getOwnedAnimals().get(i).getAppealVal() * 4;
+			}
+		}
     
 	}
 

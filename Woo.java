@@ -252,7 +252,7 @@ public class Woo
                         System.out.println("\nWhat would you like to do?");
                         System.out.println("\t1) Place this animal");
                         System.out.println("\t2) Skip to next animal");
-                        System.out.println("\t3) End the circus right now");
+                        System.out.println("\t3) End the circus right now\n");
                         int placeAnimal = Keyboard.readInt();
 
                         while (placeAnimal != 1 && placeAnimal != 2 && placeAnimal != 3)
