@@ -87,7 +87,9 @@ public class GameBoard
 				board[a + x][b + y] = animalShape[a][b];
 			}
 		}
+		someAnimal.putOnBoard();
 		return true;
+		
 	}
 
 	public void reset()
