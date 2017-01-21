@@ -8,7 +8,6 @@ public class Player
 	private ArrayList<Animal> ownedAnimals;
 	private ArrayList<Integer> trickVal;
 	private ArrayList<Integer> appealVal;
-	//private int price;
 
 	public Player(String n)
 	{
@@ -84,10 +83,12 @@ public class Player
 			return 1;
 		}
 	}
-	public ArrayList<Integer> getTrickVal() {
+	public ArrayList<Integer> getTrickVal()
+        {
 		return trickVal;
 	}
-	public ArrayList<Integer> getAppealVal() {
+	public ArrayList<Integer> getAppealVal()
+        {
 		return appealVal;
 	}
 
