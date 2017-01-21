@@ -9,7 +9,7 @@ public class Woo
 
 	public Woo()
 	{
-		countMoves = 4; // decide on what number here
+		countMoves = 3; // decide on what number here
                 gameRunning = true;
 	}
 
@@ -323,7 +323,7 @@ public class Woo
                 if (keepPlaying == 1)
                 {
                     newGame.countMoves = 3;
-                    // newBoard.expandBoard(1);
+                    newBoard.expandBoard(1);
                     newBoard.reset();
                     System.out.println(spacing);
                 }

@@ -9,7 +9,7 @@ public class GameBoard
 
 	public GameBoard()
 	{
-		boardSize = 10;
+		boardSize = 8;
 		board = new int[boardSize][boardSize];
 		roster = new ArrayList<Animal>();
 		rosterShapes = new ArrayList<int[][]>();
@@ -131,7 +131,9 @@ public class GameBoard
 
 	public void expandBoard(int x)
 	{
+            if (boardSize < 13)
+            {
 		boardSize += x;
-	}
-
+            }
+        }
 }
