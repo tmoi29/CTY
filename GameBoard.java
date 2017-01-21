@@ -18,9 +18,8 @@ public class GameBoard
 	public String toString()
 	{
 		String retStr = "";
-		retStr += "  0 1 2 3 4 5 6 7 8 9\n";
 		for (int x = 0; x < board.length; x += 1) {
-			retStr += x + " ";
+                        retStr += "  ";
 			for (int y = 0; y < board[0].length; y += 1) {
 				retStr += board[x][y] + " ";
 			}
@@ -34,24 +33,29 @@ public class GameBoard
 	    String retStr = "";
 	    for (int a = 0; a < board.length - roster.get(x).getLength(); a += 1)
 	    {
+                retStr += "  ";
 		for (int b = 0; b < board[0].length; b += 1)
 		{
 		    retStr += board[a][b] + " ";
 		}
 		retStr += "\n";
 	    }
-	    for (int a = board.length - roster.get(x).getLength(); a += 1)
+	    for (int a = board.length - roster.get(x).getLength(); a < board.length; a += 1)
 	    {
+                retStr += "  ";
 		for (int b = 0; b < board[0].length; b += 1)
 		{
 		    retStr += board[a][b] + " ";
 		}
+                retStr += "   |   ";
 		for (int c = 0; c < roster.get(x).getWidth(); c += 1)
 		{
-		    retStr += roster.get(x).getShape()[a][c] + " ";
+		    retStr += roster.get(x).getShape()[a - board.length +  roster.get(x).getLength()][c] + " ";
 		}
 		retStr += "\n";
 	    }
+            retStr += "\nNext to place: " + roster.get(x).getName() + " of length " + roster.get(x).getLength() +
+                " and width " + roster.get(x).getWidth() + "\n";
 	    return retStr;
 	}
     

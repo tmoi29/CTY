@@ -243,16 +243,16 @@ public class Woo
 		}
                 
 		System.out.println();
-		System.out.println("This is your Circus:\n");
-		System.out.println(newBoard + "//WORK ON DISPLAY");
-
+		System.out.println("This is your circus, try to fit as many animals as possible:\n");
+                
                 int i = 0;
 		while (i < newBoard.getRoster().size()){
-
-                        System.out.println("\nWhat would you like to do?");
+                        System.out.println(newBoard.boardState(i));
+                        System.out.println("What would you like to do?");
                         System.out.println("\t1) Place this animal");
                         System.out.println("\t2) Skip to next animal");
-                        System.out.println("\t3) End the circus right now\n");
+                        System.out.println("\t3) End the circus right now");
+                        System.out.print("Selection: ");
                         int placeAnimal = Keyboard.readInt();
 
                         while (placeAnimal != 1 && placeAnimal != 2 && placeAnimal != 3)
@@ -264,38 +264,51 @@ public class Woo
                         
                         if (placeAnimal == 1)
                         {
-                            System.out.println("\nInput X, Y coordinates");
+                            System.out.println(spacing);
+                            System.out.println("The top left corner is considered (0, 0)\n");
+                            System.out.println(newBoard.boardState(i));
+                            System.out.println("Please input the X and Y coordinates of where to place");
                             System.out.print("X coordinate: ");
                             int x = Keyboard.readInt();
                             System.out.print("Y coordinate: ");
                             int y = Keyboard.readInt();
 			
-                            if (newBoard.addAnimal(newBoard.getRoster().get(i), x, y)){
-				System.out.println("\n" + newBoard);
+                            if (newBoard.addAnimal(newBoard.getRoster().get(i), y, x)){
+                                System.out.println(spacing);
+                                System.out.println(newBoard.getRoster().get(i).getName() + " successfully placed at (" + x + ", " + y + ").\n");
 				i += 1;
                             }
                             else{
-				System.out.println("\n\nIt doesn't fit. Try again.\n\n");
-				System.out.println(newBoard);
+                                System.out.println(spacing);
+				System.out.println("It doesn't fit. Try again.\n");
                             }
                             
                         }
                         else if (placeAnimal == 2)
                         {
+                            System.out.println(spacing);
+                            System.out.println(newBoard.getRoster().get(i).getName() + " has been skipped.\n");
                             i += 1;
                         }
                         else
                         {
+                            System.out.println(spacing);
+                            System.out.println("Circus has been ended.");
                             break;
                         }
                 }
-
+                if (i == newBoard.getRoster().size())
+                {
+                    System.out.println(spacing);
+                    System.out.println("\nNo more animals left to place. Printing circus results...");
+                }
+                
+                System.out.println("\nHow your circus looked:\n" + newBoard);
 		newCircus.results(newPlayer);
 		newCircus.setAmtEarned();
-		System.out.println(newCircus);
 		System.out.println(newPlayer.newBalance(newCircus));
 
-                System.out.println("Would you like to prepare for the next circus?");
+                System.out.println("\nWould you like to prepare for the next circus?");
                 System.out.println("\t1) Yes");
                 System.out.println("\t2) No, show me the final results");
                 int keepPlaying = Keyboard.readInt();

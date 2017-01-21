@@ -23,7 +23,7 @@ public class Player
 	public String toString()
 	{
 		String retStr = "";
-		retStr += "Your current funds: $ " + currentFunds + "\n";
+		retStr += "Your current funds: $" + currentFunds + "\n";
 		retStr += "Your fame: " + amtFame + " points";
 		return retStr;
 	}
@@ -31,7 +31,7 @@ public class Player
 	public String newBalance(Circus c){
 		currentFunds += c.getAmtEarned();
 		amtFame += c.getFameGained();
-		String ret = "Updated Funds: " + currentFunds;
+		String ret = "Updated Funds: $" + currentFunds;
 		ret += "\nUpdated Fame: " + amtFame;
 		return ret;
 	}
