@@ -33,7 +33,7 @@ To Do List
         7. Adjust numbers 1/20
                 a. decide on permanent values: countMoves, price, algorithm for results
         8. MAKE IT LOOK NICE 1/20
-                a. less text on screen at once as to not overwhelm user
+                (DONE) a. less text on screen at once as to not overwhelm user
                 b. GameBoard and Animals-- figure out a better way to display
 	9. check 1/20 - end (1/22) 
 		a. review code and run tests

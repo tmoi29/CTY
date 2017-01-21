@@ -1,9 +1,9 @@
 public abstract class Animal
 {
-    protected int trickVal;
+    protected int trickVal; // trick value
     protected String trick;
     protected int price;
-    protected int appealVal;
+    protected int appealVal; // appeal value
     protected int length;
     protected int width;
     protected int[][] shape;
