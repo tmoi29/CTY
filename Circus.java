@@ -38,11 +38,11 @@ public class Circus
 		
 	numAudience = 	(sumAppeal + (sumTrick * 2)) / 2;
 
-	// only updated fameGained when the animal bought is trained AND is on the gameboard
+	// only updates fameGained when the animal bought is trained AND is on the gameboard
 	for (int i = 0; i < person.getOwnedAnimals().size(); i++) {
+	    // checks if the animal is on the board and trained
 	    if (person.getOwnedAnimals().get(i).getIsTrained() && person.getOwnedAnimals().get(i).getIsOnBoard()){
 		fameGained += person.getOwnedAnimals().get(i).getAppealVal() * 4;
-		// checks if the animal is on the board and trained
 	    }
 	}
     }
