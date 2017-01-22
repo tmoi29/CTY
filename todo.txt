@@ -27,14 +27,14 @@ To Do List
 		b. work on methods to add and remove animals
 		c. test in Woo
                 d. make circus display prettier
-	(PARTLY DONE) 6. Woo driver 1/19
+	(DONE) 6. Woo driver 1/19
 		a. organize and write code based off flowchart
 		* still need to finalize *
         7. Adjust numbers 1/20
                 a. decide on permanent values: countMoves, price, algorithm for results
         8. MAKE IT LOOK NICE 1/20
                 (DONE) a. less text on screen at once as to not overwhelm user
-                b. GameBoard and Animals-- figure out a better way to display
+                (DONE) b. GameBoard and Animals-- figure out a better way to display
 	9. check 1/20 - end (1/22) 
 		a. review code and run tests
 		b. debugging

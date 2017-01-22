@@ -9,7 +9,7 @@ public class Woo
 
     public Woo()
     {
-	countMoves = 5; // decide on what number here
+	countMoves = 5;
 	gameRunning = true;
     }
 
