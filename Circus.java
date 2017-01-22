@@ -49,7 +49,7 @@ public class Circus
 
     public void setAmtEarned()
     {
-	amtEarned = numAudience * price / 8;
+	amtEarned = numAudience * price / 10;
     }
 
     public String toString()

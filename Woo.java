@@ -4,12 +4,13 @@ public class Woo
 {
     private int countMoves;
     private boolean gameRunning;
-    
+
+    // list of animals that exist
     public static final String[] ANIMALS = {"Bear", "Elephant", "Giraffe", "Lion", "RedPanda"};
 
     public Woo()
     {
-	countMoves = 5;
+	countMoves = 4;
 	gameRunning = true;
     }
 
@@ -78,6 +79,7 @@ public class Woo
 	    }
     }
 
+    // used to make terminal display nicer
     public static String prettySpacing(int x)
     { 
 	String retStr = "";
@@ -371,7 +373,7 @@ public class Woo
 		// if when user wants to continue the game
                 if (keepPlaying == 1)
 		    {
-			newGame.countMoves = 5;
+			newGame.countMoves = 4;
 			newBoard.expandBoard(1);
 			newBoard.reset();
 			System.out.println(spacing);
