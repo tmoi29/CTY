@@ -108,14 +108,20 @@ Yedoh :: Fixed format (nicer to look at from the terminal), and fixed a few more
 2017-01-20
 --------------------------------------------------------------
 Chester :: made gameplay look nicer
-Tiffany ::
+Tiffany :: Fixed formatting on Woo
 Yedoh :: updated UML diagram, helped find bugs in the program
 
 
-2017-01-20
+2017-01-21
+--------------------------------------------------------------
+Chester :: 
+Yedoh :: finished updating the UML diagram, added inline comments
+
+
+2017-01-22
 --------------------------------------------------------------
 Chester :: made gameplay look nicer
-Tiffany ::
-Yedoh :: finished updating the UML diagram
+Tiffany :: Added inline comments to Circus and GameBoard and debugged
+Yedoh :: Added inline comments and debugged
 
 ==============================================================
