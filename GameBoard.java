@@ -10,9 +10,9 @@ public class GameBoard
     public GameBoard()
     {
 	boardSize = 8;
-	board = new int[boardSize][boardSize];
-	roster = new ArrayList<Animal>();
-	rosterShapes = new ArrayList<int[][]>();
+	board = new int[boardSize][boardSize]; // sets up the board
+	roster = new ArrayList<Animal>(); // stores the animals on the board
+	rosterShapes = new ArrayList<int[][]>(); // stores the shapes of the animals
     }
 
     public String toString()
@@ -25,7 +25,7 @@ public class GameBoard
 	    }
 	    retStr += "\n";
 	}
-	return retStr;
+	return retStr; // shows the board
     }
 
     public String boardState(int x)
@@ -59,6 +59,7 @@ public class GameBoard
 	retStr += "\nNext to place: " + roster.get(x).getName() + " of length " + roster.get(x).getLength() +
 	    " and width " + roster.get(x).getWidth() + "\n";
 	return retStr;
+	// shows the current state of the game board along with the shape of the next animal to be placed
     }
     
     
@@ -82,6 +83,7 @@ public class GameBoard
 	}
 	retStr += "Next animal to place: " + roster.get(i).getName();
 	return retStr;
+	// shows the next animal to be placed
     }
 
     public ArrayList<int[][]> getRosterShapes(){
