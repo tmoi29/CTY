@@ -14,10 +14,13 @@ OBSTACLES OVERCOME
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+improved display of the gameboard/animals
 
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ability to use 2d array as an ArrayList
+& nothing much really…
 
 
 MID-DEVELOPMENT DESIGN CHANGES
