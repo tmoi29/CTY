@@ -10,7 +10,7 @@ public class Circus
 	amtEarned = 0;
 	fameGained = 0;
 	numAudience = 0;
-	price = 15;
+	price = 15; // price of each ticket
     
     }
     
@@ -30,7 +30,7 @@ public class Circus
 	int sumTrick = 0;
 		
 	for (Integer x : person.getAppealVal()){
-	    sumAppeal += x;
+	    sumAppeal += x; 
 	} 
 	for (Integer x : person.getTrickVal()){
 	    sumTrick += x;
@@ -42,6 +42,7 @@ public class Circus
 	for (int i = 0; i < person.getOwnedAnimals().size(); i++) {
 	    if (person.getOwnedAnimals().get(i).getIsTrained() && person.getOwnedAnimals().get(i).getIsOnBoard()){
 		fameGained += person.getOwnedAnimals().get(i).getAppealVal() * 4;
+		// checks if the animal is on the board and trained
 	    }
 	}
     }
