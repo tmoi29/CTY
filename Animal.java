@@ -6,11 +6,12 @@ public abstract class Animal
     protected int appealVal; // appeal value
     protected int length;
     protected int width;
-    protected int[][] shape;
-    protected boolean isTrained;
+    protected int[][] shape; // 2D array shape of animal
+    protected boolean isTrained; // keeps track of training
     protected String name;
-    protected boolean isOnBoard;
+    protected boolean isOnBoard; // keeps track of being on gameBoard
 
+    // get methods
     public int getTrickVal()
     {
 	return trickVal;
@@ -43,11 +44,16 @@ public abstract class Animal
     {
         return isTrained;
     }
+    public boolean getIsOnBoard(){
+	return isOnBoard;
+    }
+
+    // set methods
     public boolean train(){
 	isTrained = true;
 	return isTrained;
     }
-    public abstract String toString();
+
     public String getName() {
 	return name;
     }
@@ -59,8 +65,8 @@ public abstract class Animal
 	isOnBoard = false;
 	return isOnBoard;
     }
-    public boolean getIsOnBoard(){
-	return isOnBoard;
-    }
+
+    // returns info about the animal, different for each
+    public abstract String toString();
 
 }

@@ -36,24 +36,25 @@ public class Circus
 	    sumTrick += x;
 	}
 		
-	numAudience = 	(sumAppeal + (sumTrick * 2)) / 2;
+	numAudience = (sumAppeal + (sumTrick * 2)) / 2;
 
 	// only updates fameGained when the animal bought is trained AND is on the gameboard
 	for (int i = 0; i < person.getOwnedAnimals().size(); i++) {
 	    // checks if the animal is on the board and trained
 	    if (person.getOwnedAnimals().get(i).getIsTrained() && person.getOwnedAnimals().get(i).getIsOnBoard()){
-		fameGained += person.getOwnedAnimals().get(i).getAppealVal() * 4;
+		fameGained += person.getOwnedAnimals().get(i).getAppealVal() * 0.5;
 	    }
 	}
     }
 
     public void setAmtEarned()
     {
-	amtEarned = numAudience * price;
+	amtEarned = numAudience * price / 8;
     }
 
     public String toString()
     {
+        // prints earnings
 	String retStr = "";
 	retStr += "Total amount earned: " + amtEarned + "\n";
 	retStr += "Total fame gained: " + fameGained + "\n";

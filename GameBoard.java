@@ -128,10 +128,12 @@ public class GameBoard
 
     public void reset()
     {
+        // clears out any animals on the board
 	board = new int[boardSize][boardSize];
 
     }
 
+    // increases size of board by 1
     public void expandBoard(int x)
     {
 	if (boardSize < 13)

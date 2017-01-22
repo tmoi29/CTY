@@ -38,10 +38,11 @@ public class Player
 	return ret;
     }
 	
-    public void buyAnimal(Animal someAnimal)
+    public boolean buyAnimal(Animal someAnimal)
     {
-	if (currentFunds <= 0) {
+	if (currentFunds < someAnimal.getPrice()) {
 	    System.out.println("You do not have enough money to complete the transaction.");
+            return false;
 	}
 	else {
 	    // add animal to the ArrayList ownedAnimals
@@ -53,9 +54,11 @@ public class Player
 	    // add the animal's trick value and appeal value to each ArrayList
 	    trickVal.add(someAnimal.getTrickVal());
 	    appealVal.add(someAnimal.getAppealVal());
+            return true;
 	}
     }
 
+    // returns owned animals
     public String listOwnedAnimals()
     {
 	String retStr = "";
@@ -75,7 +78,7 @@ public class Player
 	return retStr.substring(0, retStr.length() - 1);
     }
 
-
+    // attempts to train an animal
     public int trainAnimal(Animal someAnimal)
     {
 	if (someAnimal.getIsTrained())
@@ -89,6 +92,8 @@ public class Player
 		return 1;
 	    }
     }
+
+    // get methods
     public ArrayList<Integer> getTrickVal()
     {
 	return trickVal;

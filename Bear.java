@@ -1,4 +1,5 @@
-public class Bear extends Animal{
+public class Bear extends Animal
+{
     public Bear(){
 	trickVal = 15;
 	trick = "Riding Unicycle";

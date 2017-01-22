@@ -61,12 +61,14 @@ public class Woo
 	    {
 		System.out.println(prettySpacing(100));
 		// buy animal
-		somePlayer.buyAnimal(someAnimal);
-		// update countMoves
-		someGame.countMoves -= 1;
-		// add animal and its shape to each ArrayList
-		someBoard.getRoster().add(someAnimal);
-		someBoard.getRosterShapes().add(someAnimal.getShape());
+                if (somePlayer.buyAnimal(someAnimal))
+                {
+                    // if purchase was successfully, decrement countMoves
+                    someGame.countMoves -= 1;
+                    // add animal and its shape to each ArrayList
+                    someBoard.getRoster().add(someAnimal);
+                    someBoard.getRosterShapes().add(someAnimal.getShape());
+                }
 	    }
 	// if when user does not confirm purchase
 	else
