@@ -10,17 +10,15 @@ Animal Circus!
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-GameBoard:
 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Learned how to print pretty symbols.
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,8 +30,8 @@ We changed the game from being time sensitive to move sensitive.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ALWAYS PULL BEFORE COMMITTING
-||||||||||||||||||||||||||||||||||||||||||
+ALWAYS PULL BEFORE COMMITTING/PUSHING
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
@@ -114,13 +112,12 @@ Yedoh :: updated UML diagram, added inline comments
 
 2017-01-21
 --------------------------------------------------------------
-Chester :: 
 Yedoh :: finished updating the UML diagram, added inline comments
 
 
 2017-01-22
 --------------------------------------------------------------
-Chester :: made gameplay look nicer
+Chester :: edited numbers, fixed flowchart, added inline comments
 Tiffany :: Added inline comments to Circus and GameBoard and debugged
 Yedoh :: finished adding inline comments and debugged
 
