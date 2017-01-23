@@ -10,31 +10,39 @@ Animal Circus!
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to implement different type of animals -- abstract Animal class, some hardcoded sub-classes
+Dealing with user inputs -- used Keyboard class
+How animals would be added to the board -- used a binary system where 0 is a free space and 1 is occupied
 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-improved display of the gameboard/animals
+Need to improve display of the gameboard/animals
+No way to remove animals after adding to the game board
+Need to change some specific hard-coded values
 
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ability to use 2d array as an ArrayList
-& nothing much really…
+Ability to use 2D-arrays as elements of an ArrayList
+Effective way to prompt for inputs
+Dealing with (un)intentional bad inputs
 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We added a game board to enhance the gaming experience. 
+We added a game board to enhance the gaming experience.
 We removed the distinction between adults and children during the circus.
 We removed the user ability to change the price in order to streamline the game.
-We removed the special moves of animals.
-We changed the game from being time sensitive to move sensitive. 
+We removed the special moves of animals (and doing the game board instead)
+We changed the game from being time sensitive to move sensitive because it fit the type of game better and was easier to code.
+
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ALWAYS PULL BEFORE COMMITTING/PUSHING
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ALWAYS PULL BEFORE COMMITTING/PUSHING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Decide on consistent coding format (indentation, brackets, comments)
+Future projects: Coordinate better with group to decide who will edit what.
 
 
 
